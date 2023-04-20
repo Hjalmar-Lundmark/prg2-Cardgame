@@ -1,4 +1,4 @@
-public class Card {
+public abstract class Card {
     private String name;
     private int HP;
     private int magic;
@@ -6,16 +6,16 @@ public class Card {
     private int str;
     private int sneak;
 
-    //private String playAgainst(Card c);
+    public abstract String playAgainst(Card c);
 
     public static void main(String[] args) {
         Warrior w = new Warrior("Aragon", 7, 1, 6, 9, 2);
         Mage m = new Mage("Gandalf", 4, 8, 7, 3, 5);
         Archer a = new Archer("Legolas", 5, 4, 9, 6, 7);
-        Thief t = new Thief("Smeagol", 4, 3, 6, 6, 9);
+        Thief t = new Thief("Smeagol", 4, 2, 5, 4, 7);
 
         System.out.println(w.getName() + " " + w.playAgainst(m) + " AGAINST " + m.getName());
-
+        System.out.println(a.getName() + " " + a.playAgainst(t) + " AGAINST " + t.getName());
 
     }
 
