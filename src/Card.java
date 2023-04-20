@@ -4,26 +4,28 @@ public class Card {
     private int magic;
     private int acc;
     private int str;
+    private int sneak;
 
     //public String playAgainst(Card c);
 
     public static void main(String[] args) {
-        Warrior w = new Warrior("Aragon", 7, 1, 6, 9);
-        Mage m = new Mage("Gandalf", 4, 8, 7, 3);
-        Archer a = new Archer("Legolas", 5, 4, 9, 6);
-        Thief t = new Thief("Smeagol", 4, 3, 6, 6);
+        Warrior w = new Warrior("Aragon", 7, 1, 6, 9, 2);
+        Mage m = new Mage("Gandalf", 4, 8, 7, 3, 5);
+        Archer a = new Archer("Legolas", 5, 4, 9, 6, 7);
+        Thief t = new Thief("Smeagol", 4, 3, 6, 6, 9);
 
         System.out.println(w.getName() + " " + w.playAgainst(m) + " AGAINST " + m.getName());
 
 
     }
 
-    public Card(String name, int HP, int magic, int acc, int str) {
+    public Card(String name, int HP, int magic, int acc, int str, int sneak) {
         this.name = name;
         this.HP = HP;
         this.magic = magic;
         this.acc = acc;
         this.str = str;
+        this.sneak = sneak;
     }
 
     public String getName() {
@@ -64,5 +66,13 @@ public class Card {
 
     public void setStr(int str) {
         this.str = str;
+    }
+
+    public int getSneak() {
+        return sneak;
+    }
+
+    public void setSneak(int sneak) {
+        this.sneak = sneak;
     }
 }
