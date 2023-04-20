@@ -4,5 +4,13 @@ public class Mage extends Card {
         super(name, HP, magic, acc, str);
     }
 
-
+    public String playAgainst(Card c) {
+        if (this.getStr() > c.getHP()) {
+            return "WIN";
+        } else if (this.getStr() < c.getMagic()) {
+            return "LOSE";
+        } else {
+            return "DRAW";
+        }
+    }
 }

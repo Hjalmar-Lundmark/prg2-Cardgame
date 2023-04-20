@@ -13,4 +13,5 @@ public class Warrior extends Card {
             return "DRAW";
         }
     }
+
 }
