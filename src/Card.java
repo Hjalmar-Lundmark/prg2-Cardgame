@@ -6,7 +6,7 @@ public class Card {
     private int str;
     private int sneak;
 
-    //public String playAgainst(Card c);
+    //private String playAgainst(Card c);
 
     public static void main(String[] args) {
         Warrior w = new Warrior("Aragon", 7, 1, 6, 9, 2);

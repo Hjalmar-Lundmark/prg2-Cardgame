@@ -5,9 +5,9 @@ public class Warrior extends Card {
     }
 
     public String playAgainst(Card c) {
-        if (this.getStr() > c.getHP()) {
+        if (this.getStr() >= c.getHP()) {
             return "WIN";
-        } else if (this.getHP() < c.getMagic() || this.getHP() < c.getAcc() || this.getHP() < c.getStr()) {
+        } else if (this.getHP() <= c.getMagic() || this.getHP() <= c.getAcc() || this.getHP() <= c.getStr() || this.getHP() <= this.getSneak()) {
             return "LOSE";
         } else {
             return "DRAW";
