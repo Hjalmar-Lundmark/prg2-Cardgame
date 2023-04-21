@@ -14,7 +14,7 @@ public abstract class Card {
         Warrior Aragon = new Warrior("Aragon", 8, 1, 6, 9, 2);
         Mage Gandalf = new Mage("Gandalf", 4, 8, 7, 3, 5);
         Archer Legolas = new Archer("Legolas", 5, 4, 9, 6, 7);
-        Thief Frodo = new Thief("Frodo", 4, 2, 5, 4, 7);
+        Thief Frodo = new Thief("Frodo", 4, 2, 4, 4, 5);
 
         System.out.println(Aragon.getName() + " " + Aragon.playAgainst(Gandalf) + " AGAINST " + Gandalf.getName());
         System.out.println(Frodo.getName() + " " + Frodo.playAgainst(Aragon) + " AGAINST " + Aragon.getName());

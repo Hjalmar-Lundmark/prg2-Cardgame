@@ -1,6 +1,7 @@
 # Card Game
+Card game where different cards battle against each other. 
 Character have different roles and stats. The different rolls should impact the stats, 
-with warriors having great strength, Mage having high Magic, etc. 
+with Warriors having great strength, Mages having high Magic, etc. 
 
 ### How does Combat work?
 The one who initializes the combat(runs the playAgainst code) attacks first with its signature stat 
