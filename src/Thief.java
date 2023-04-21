@@ -5,7 +5,7 @@ public class Thief extends Card {
     }
 
     public String playAgainst(Card c) {
-        if (this.getAcc() >= c.getHP()) {
+        if (this.getSneak() >= c.getHP()) {
             return "WIN";
         } else if (this.getHP() <= c.getMagic() || this.getHP() <= c.getAcc() || this.getHP() <= c.getStr() || this.getHP() <= this.getSneak()) {
             return "LOSE";

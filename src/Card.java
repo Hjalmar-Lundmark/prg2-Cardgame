@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public abstract class Card {
     private String name;
     private int HP;
@@ -9,14 +11,35 @@ public abstract class Card {
     public abstract String playAgainst(Card c);
 
     public static void main(String[] args) {
-        Warrior w = new Warrior("Aragon", 7, 1, 6, 9, 2);
-        Mage m = new Mage("Gandalf", 4, 8, 7, 3, 5);
-        Archer a = new Archer("Legolas", 5, 4, 9, 6, 7);
-        Thief t = new Thief("Smeagol", 4, 2, 5, 4, 7);
+        Warrior Aragon = new Warrior("Aragon", 8, 1, 6, 9, 2);
+        Mage Gandalf = new Mage("Gandalf", 4, 8, 7, 3, 5);
+        Archer Legolas = new Archer("Legolas", 5, 4, 9, 6, 7);
+        Thief Frodo = new Thief("Frodo", 4, 2, 5, 4, 7);
 
-        System.out.println(w.getName() + " " + w.playAgainst(m) + " AGAINST " + m.getName());
-        System.out.println(a.getName() + " " + a.playAgainst(t) + " AGAINST " + t.getName());
+        System.out.println(Aragon.getName() + " " + Aragon.playAgainst(Gandalf) + " AGAINST " + Gandalf.getName());
+        System.out.println(Frodo.getName() + " " + Frodo.playAgainst(Aragon) + " AGAINST " + Aragon.getName());
 
+
+        System.out.println("\nRandom battle between the Fellowship and the Bad guys");
+        ArrayList<Card> fellowship = new ArrayList<>();
+        fellowship.add(Aragon);
+        fellowship.add(Gandalf);
+        fellowship.add(Legolas);
+        fellowship.add(Frodo);
+
+        Warrior Gothmog = new Warrior("Gothmog", 8, 1, 4, 6, 2);
+        Mage Sauron = new Mage("Sauron", 6, 7, 5, 3, 4);
+        Archer Lurtz = new Archer("Lurtz", 7, 3, 6, 4, 3);
+        Thief Smeagol = new Thief("Smeagol", 3, 2, 4, 4, 6);
+        ArrayList<Card> BadGuys = new ArrayList<>();
+        BadGuys.add(Gothmog);
+        BadGuys.add(Sauron);
+        BadGuys.add(Lurtz);
+        BadGuys.add(Smeagol);
+
+        Card GoodGuy = fellowship.get((int) (Math.random()*fellowship.size()));
+        Card BadGuy = BadGuys.get((int) (Math.random()*fellowship.size()));
+        System.out.println(GoodGuy.getName() + " " + GoodGuy.playAgainst(BadGuy) + " AGAINST " + BadGuy.getName());
     }
 
     public Card(String name, int HP, int magic, int acc, int str, int sneak) {
